@@ -6,8 +6,8 @@ import java.util.List;
 import java.util.stream.LongStream;
 
 public class InvoiceService {
-    public List<Invoice> getInvoices(long count) {
-        return LongStream.range(0, count)
+    public List<Invoice> getInvoices(long pos, long count) {
+        return LongStream.range(pos, pos + count)
                 .mapToObj(i -> new Invoice(
                         "invoice-" + i,
                         "ab-7793-5"
